@@ -1,20 +1,17 @@
 import { NgModule } from '@angular/core';
 
 import { BrowserModule } from '@angular/platform-browser';
-import { CrudModule } from './crud/crud.module';
+
 
 import { AppComponent } from './app.component';
 
-
-
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
     
   ],
   imports: [
-    BrowserModule,
-    CrudModule
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]

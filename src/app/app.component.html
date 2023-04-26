@@ -1,38 +1,45 @@
 <h3 id="crud"> CRUD </h3>
 <div class="d-flex">
-
-<div class=" list-group list-reset">
-  <div class="container">
-    <button class="list-group-item list-group-item-action">
-      Agrega a una persona
-    </button>
-  </div>
-  <button class="btn btn-danger">
-  borrar
-  </button>
-</div>
-     <table class="table table-active">
-      <thead>
-        <tr>
-          <th>
-        Hola como estas 
-      </th>
-      </tr>
-      </thead>
-      <tbody scope="row">
-        <tr class="table table">
-          ggg
-        </tr>
-        <tr>
-          gg
-        </tr>
-        <tr>
-          <th scope="row">g</th>
-          <th scope="row">o</th>
-          <td>@twitter</td>
-          <td>@</td>
-        </tr>
-      </tbody>
-    </table>
+  <div class=" list-group list-reset">
+    
+    <div class="container">
+      <input type="text"
+      class="form-control"
+      placeholder="Agrega a un post"
+      (keyup.enter)="aggTag(posts.value)">
+    </div>
   
+   <table class="table table-striped table-hover" id="tabla">
+    <thead>
+      <tr>
+        <th>ID:</th>
+        <th>Titulo:</th>
+        <th>Descripción:</th>
+        <th>ID del autor:</th>
+        <th> ---</th>
+      </tr>
+    </thead>
+    <tbody scope="row">
+      <tr *ngFor="let post of posts">
+        <td>{{post.id}}</td>
+        <td>{{post.title}}</td>
+        <td>{{post.body}}</td>
+        <td>{{post.userId}}</td>
+        <td> 
+          <button class="btn btn-danger" (click)="borrar(post.id)" >borrar</button> 
+
+        </td>
+        <td> 
+          <button class="btn btn-primary" (click)="update(post.gg)" >editar</button> 
+
+        </td>
+      </tr>
+
+    </tbody>
+
+
+  </table>
+
+  
+
 </div>
