@@ -4,10 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 
 import { AppComponent } from './app.component';
+import { AgregarComponent } from './crud/agregar/agregar.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AgregarComponent,
+
     
   ],
   imports: [

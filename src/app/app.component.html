@@ -1,13 +1,9 @@
-<h3 id="crud"> CRUD </h3>
+<h2 id="crud" > CRUD </h2>
 <div class="d-flex">
   <div class=" list-group list-reset">
     
-    <div class="container">
-      <input type="text"
-      class="form-control"
-      placeholder="Agrega a un post"
-      (keyup.enter)="aggTag(posts.value)">
-    </div>
+   <app-agregar></app-agregar>
+
   
    <table class="table table-striped table-hover" id="tabla">
     <thead>
@@ -26,11 +22,11 @@
         <td>{{post.body}}</td>
         <td>{{post.userId}}</td>
         <td> 
-          <button class="btn btn-danger" (click)="borrar(post.id)" >borrar</button> 
+          <button class="btn btn-outline-dark" (click)="borrar(post.id)" >borrar</button> 
 
         </td>
         <td> 
-          <button class="btn btn-primary" (click)="update(post.gg)" >editar</button> 
+          <button class="btn btn-outline-dark" (click)="update(post.id)" >editar</button> 
 
         </td>
       </tr>
